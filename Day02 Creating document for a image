@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Append Image Element</title>
+</head>
+<body>
+
+<button id="createImageButton">Create Image</button>
+
+<script>
+document.getElementById('createImageButton').addEventListener('click', function() {
+  var img = document.createElement('img');
+  img.src = 'https://lchlogistics.com/wp-content/uploads/2020/10/lorry-driving-in-sunset.jpg'; // Replace 'path_to_your_image.jpg' with the actual path to your image
+  document.body.appendChild(img);
+});
+</script>
+
+</body>
+</html>
