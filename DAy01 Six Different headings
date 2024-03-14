@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Custom font for headings */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Default font for paragraphs */
+    p {
+      font-family: Times New Roman, serif;
+    }
+  </style>
+</head>
+<body>
+  <h1>This is Heading 1</h1>
+  <p>This is a paragraph with the default font.</p>
+
+  <h2>This is Heading 2</h2>
+  <p>This is another paragraph with the default font.</p>
+
+  <h3>This is Heading 3</h3>
+  <p>Yet another paragraph with the default font.</p>
+
+  <h4>This is Heading 4</h4>
+  <p>Here's a paragraph with the default font.</p>
+
+  <h5>This is Heading 5</h5>
+  <p>This paragraph also uses the default font.</p>
+
+  <h6>This is Heading 6</h6>
+  <p>And finally, a paragraph with the default font.</p>
+</body>
+</html>
