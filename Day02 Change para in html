@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Paragraph Style</title>
+    <style>
+        /* Initial styles for the paragraph */
+        #collegeInfo {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: black;
+        }
+        .highlight {
+            font-weight: bold;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input type="button" value="Change" onclick="changeStyle()">
+    </form>
+
+    <p id="collegeInfo">
+        Welcome to our college! We offer a wide range of programs in Arts, Science, and Engineering. Feel free to explore our campus and facilities.
+    </p>
+
+    <script>
+        function changeStyle() {
+            var paragraph = document.getElementById("collegeInfo");
+            paragraph.style.fontFamily = "Verdana, Geneva, sans-serif";
+            paragraph.style.fontSize = "20px";
+            paragraph.style.color = "green";
+        }
+
+        // Function to highlight bold words on mouse over
+        var words = document.getElementById("collegeInfo").innerHTML.split(" ");
+        for (var i = 0; i < words.length; i++) {
+            if (words[i].includes("<strong>")) {
+                words[i] = words[i].replace("<strong>", "");
+            }
+            if (words[i].includes("</strong>")) {
+                words[i] = words[i].replace("</strong>", "");
+            }
+        }
+
+        var highlightedWords = words.map(function(word) {
+            return '<span onmouseover="highlightWord(this)" onmouseleave="unhighlightWord(this)">' + word + '</span>';
+        });
+
+        document.getElementById("collegeInfo").innerHTML = highlightedWords.join(" ");
+
+        function highlightWord(element) {
+            element.classList.add("highlight");
+        }
+
+        function unhighlightWord(element) {
+            element.classList.remove("highlight");
+        }
+    </script>
+</body>
+</html>
